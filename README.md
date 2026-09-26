@@ -6,7 +6,7 @@
 
 ## Team Members & Roles
 
-
+- Dee Jhay H. Mercado - Project Lead/Developer
 
 ## Project Summary
 
