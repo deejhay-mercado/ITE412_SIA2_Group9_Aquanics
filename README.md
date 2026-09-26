@@ -10,7 +10,7 @@
 - Bernadette M. Botones - Presenter
 - Kurtrussel Apostol - Project Documenter
 - Mark Anthony D. Tala - Diagram Designer
-- Aaron Ola - Researcher
+- Aaron Ola - Researcher/Tester
 
 ## Project Summary
 
