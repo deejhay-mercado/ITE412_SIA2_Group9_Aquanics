@@ -8,6 +8,7 @@
 
 - Dee Jhay H. Mercado - Project Lead/Developer
 - Bernadette M. Botones - Presenter
+- Kurtrussel Apostol - Project Documenter
 
 ## Project Summary
 
