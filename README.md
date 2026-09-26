@@ -9,6 +9,7 @@
 - Dee Jhay H. Mercado - Project Lead/Developer
 - Bernadette M. Botones - Presenter
 - Kurtrussel Apostol - Project Documenter
+- Mark Anthony D. Tala - Diagram Designer
 
 ## Project Summary
 
