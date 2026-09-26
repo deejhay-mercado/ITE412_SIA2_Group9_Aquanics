@@ -7,6 +7,7 @@
 ## Team Members & Roles
 
 - Dee Jhay H. Mercado - Project Lead/Developer
+- Bernadette M. Botones - Presenter
 
 ## Project Summary
 
