@@ -121,3 +121,19 @@ This creates a continuous monitoring and control cycle:
 **Sensors → ESP32 → Wi-Fi → Firebase Cloud → Web Dashboard & Analytics → Control Commands → ESP32 → Actuators**
 
 The system also incorporates **solar energy** to support continuous operation and improve system availability during regional power instabilities.
+
+## Integration Pattern Applied
+
+### Hub-and-Spoke Architecture
+
+### Rationale
+
+The Hub-and-Spoke pattern is appropriate for AQUANICS because the system involves multiple interconnected components, including ESP32-based sensors and actuators, Firebase Cloud, the web dashboard, predictive analytics, and alert services. The sensors and devices continuously collect aquaponics data and transmit the readings through the central hub. The hub routes the data to Firebase Cloud for real-time storage and historical records. The stored information can then be accessed by the predictive analytics module for trend analysis and system insights.
+
+When a user performs an action through the web dashboard, the request is routed through the central hub and forwarded to the appropriate device or service. Similarly, when sensor readings reach caution or critical conditions, the hub can route the information to the alert and notification module for user notification. Using a centralized integration approach reduces complex point-to-point dependencies between components, making the system easier to maintain, troubleshoot, and expand as additional sensors, actuators, or services are introduced.
+
+### Diagram Reference
+
+The high-level architecture diagram for AQUANICS is available below:
+
+docs/HighLevelArch.png
