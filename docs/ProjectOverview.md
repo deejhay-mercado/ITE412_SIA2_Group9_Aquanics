@@ -71,3 +71,53 @@
 - Integration Testing
 - User Acceptance Testing (UAT)
 - Hardware Validation Testing
+
+## High-Level System Overview
+
+### 1. Major Modules / Subsystems
+
+AQUANICS is composed of several interconnected modules that work together to support real-time aquaponics monitoring, automated control, cloud data management, and predictive analytics.
+
+- **Sensor and Control Module** - Collects real-time environmental and water-quality data such as **pH, temperature, dissolved oxygen (DO), turbidity, humidity, and water level** using ESP32 microcontrollers and connected sensors. The module also controls actuators such as **water pumps, fish feeders, and grow lights** based on system conditions and user-defined commands. |
+
+- **Cloud Server and Database Module** - Uses **Firebase Cloud** for real-time data storage, synchronization, and management. It stores current sensor readings and historical records that can be used for monitoring, trend analysis, predictive analytics, and remote system management. |
+
+- **Web Dashboard and Analytics Module** - Provides the main user interface for monitoring and managing the aquaponics system. It displays real-time sensor readings, historical trends, alerts, and analytics. The module also supports predictive analysis and allows authorized users to remotely control connected actuators.
+
+- **Alert and Notification Module** - Monitors sensor readings and identifies conditions that may require attention. It provides alerts when monitored parameters reach predefined caution or critical conditions, helping users respond to potential aquaponics system issues.
+
+- **Predictive Analytics Module** Processes historical and real-time aquaponics data to identify patterns and generate predictive insights. These insights can support early detection of possible environmental changes and assist users in making informed management decisions. |
+
+---
+
+### 2. External Systems / Interfaces
+
+AQUANICS integrates with several external systems, services, and interfaces to support communication between the hardware, cloud infrastructure, and user-facing application.
+
+- **Firebase Cloud API** – Provides cloud-based data storage, real-time synchronization, and access to historical sensor records used by the monitoring and analytics components.
+
+- **ESP32 SDK and Sensor Libraries** – Support communication between the ESP32 microcontrollers and connected sensors and actuators. These components enable the system to collect sensor readings and issue control commands to connected devices.
+
+- **Web Application Interface** – Provides communication between the user-facing dashboard and cloud services. It retrieves sensor data, displays monitoring information, presents analytics, and sends authorized control commands.
+
+- **IoT Sensor and Actuator Interfaces** – Connect the ESP32 microcontrollers with water-quality and environmental sensors, as well as actuators such as pumps, feeders, and grow lights.
+
+- **Predictive Analytics Interface** – Connects collected and stored aquaponics data with the analytics component to generate trends, predictions, and system insights.
+
+---
+
+### 3. Data Flow Summary
+
+The AQUANICS system follows a continuous data flow between the **sensors, ESP32 microcontrollers, Firebase Cloud, web dashboard, analytics components, and actuators**.
+
+First, the connected sensors collect real-time aquaponics data such as **pH, temperature, dissolved oxygen, turbidity, humidity, and water level**. The ESP32 microcontrollers process the sensor readings and transmit the collected data through **Wi-Fi** to the Firebase Cloud.
+
+Firebase stores and synchronizes the incoming data, allowing both real-time monitoring and historical data storage. The **Web Dashboard** retrieves the stored information and presents it to authorized users through real-time readings, visualizations, trends, alerts, and predictive analytics.
+
+Based on system conditions, analytics results, or authorized user input, control commands can be transmitted through the cloud back to the ESP32 control module. The ESP32 then operates the appropriate actuators, such as **water pumps, fish feeders, and grow lights**.
+
+This creates a continuous monitoring and control cycle:
+
+**Sensors → ESP32 → Wi-Fi → Firebase Cloud → Web Dashboard & Analytics → Control Commands → ESP32 → Actuators**
+
+The system also incorporates **solar energy** to support continuous operation and improve system availability during regional power instabilities.
