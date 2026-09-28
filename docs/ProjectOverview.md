@@ -137,3 +137,26 @@ When a user performs an action through the web dashboard, the request is routed 
 The high-level architecture diagram for AQUANICS is available below:
 
 docs/HighLevelArch.png
+
+# AQUANICS Messaging Middleware
+
+## Overview
+
+The AQUANICS messaging middleware demonstrates asynchronous communication between the Sensor Data Module and the Alert/Monitoring Module.
+
+The Sensor Data Module acts as the producer by submitting sensor events to a message queue.
+The Alert/Monitoring Module acts as the consumer by retrieving and processing queued sensor events.
+
+## Technologies
+
+- Node.js
+- JavaScript
+- File-based message queue
+
+## Producer
+
+Run:
+
+```bash
+node producer.js
+```
